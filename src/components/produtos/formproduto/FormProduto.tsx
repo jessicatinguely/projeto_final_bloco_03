@@ -6,6 +6,7 @@ import { atualizar, cadastrar, buscar } from "../../../services/Service"
 import type Categoria from "../../../models/Categoria"
 import type Produto from "../../../models/Produto"
 import { ClipLoader } from "react-spinners"
+import { ToastAlerta } from "../../../utils/ToastAlerta"
 
 function FormProduto() {
 	const navigate = useNavigate()
@@ -28,7 +29,7 @@ function FormProduto() {
 		try {
 			await buscar(`/produtos/${id}`, setProduto)
 		} catch (error: any) {
-			alert("Erro ao Buscar Produto")
+			ToastAlerta("Erro ao Buscar Produto", "erro");
 			console.error(error)
 		}
 	}
@@ -37,7 +38,7 @@ function FormProduto() {
 		try {
 			await buscar(`/categorias/${id}`, setCategoria)
 		} catch (error: any) {
-			alert("Erro ao Buscar Categoria")
+			ToastAlerta("Erro ao Buscar Categoria", "erro");
 			console.error(error)
 		}
 	}
@@ -46,7 +47,7 @@ function FormProduto() {
 		try {
 			await buscar(`/categorias`, setCategorias)
 		} catch (error: any) {
-			alert("Erro ao Buscar Categorias")
+			ToastAlerta("Erro ao Buscar Categorias", "erro");
 			console.error(error)
 		}
 	}
@@ -94,18 +95,18 @@ function FormProduto() {
 			try {
 				await atualizar(`/produtos`, produto, setProduto)
 
-				alert("Produto atualizado com sucesso")
+				ToastAlerta("Produto atualizado com sucesso", "sucesso");
 			} catch (error: any) {
-				alert("Erro ao atualizar o Produto!")
+				ToastAlerta("Erro ao atualizar o Produto!", "erro");
 				console.error(error)
 			}
 		} else {
 			try {
 				await cadastrar(`/produtos`, produto, setProduto)
 
-				alert("Produto cadastrado com sucesso")
+				ToastAlerta('Produto cadastrado com sucesso', 'sucesso');
 			} catch (error: any) {
-				alert("Erro ao cadastrar o Produto!")
+				ToastAlerta("Erro ao cadastrar o Produto!", "erro");
 				console.error(error)
 			}
 		}

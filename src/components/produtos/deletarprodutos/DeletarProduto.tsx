@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { deletar, buscar } from "../../../services/Service"
 import type Produto from "../../../models/Produto"
 import { ClipLoader } from "react-spinners"
+import { ToastAlerta } from "../../../utils/ToastAlerta"
 
 
 function DeletarProduto() {
@@ -18,7 +19,7 @@ function DeletarProduto() {
         try {
             await buscar(`/produtos/${id}`, setProduto)
         } catch (error: any) {
-            alert('Produto não encontrado!')
+            ToastAlerta('Produto não encontrado!', 'erro');
             console.error(error)
         }
     }
@@ -35,10 +36,11 @@ function DeletarProduto() {
         try {
             await deletar(`/produtos/${id}`)
 
-           alert('Produto apagado!')
+            ToastAlerta('Produto apagado!', 'info');
+            
 
         } catch (error) {
-           alert('Erro ao apagar o produto')
+            ToastAlerta('Erro ao apagar o produto', 'erro');
            console.error(error)
         }
 

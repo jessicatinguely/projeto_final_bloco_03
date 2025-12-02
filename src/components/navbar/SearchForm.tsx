@@ -1,11 +1,12 @@
 import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 import type { FormEvent } from "react";
+import { ToastAlerta } from "../../utils/ToastAlerta";
 
 function SearchForm({ className = "" }: { className?: string }) {
 
     function buscarProdutos(e: FormEvent<HTMLFormElement>){
         e.preventDefault();
-        alert('Em desenvolvimento!');
+        ToastAlerta('Em desenvolvimento!', 'info');
     }
 
     return (
