@@ -1,5 +1,5 @@
 # 🏥 Farmácia Viva Bem — Frontend  
-Projeto desenvolvido por **Jéssica Ghirardelli Tinguely**
+Projeto desenvolvido por **Jessica Ghirardelli Tinguely**
 
 ---
 
@@ -87,7 +87,7 @@ npm run dev
 
 ## 👩‍💻 Autora
 
-**Jéssica Ghirardelli Tinguely**  
+**Jessica Ghirardelli Tinguely**  
 Desenvolvedora Frontend | Estudante ADS | Apaixonada por tecnologia 💙
 
 ---
