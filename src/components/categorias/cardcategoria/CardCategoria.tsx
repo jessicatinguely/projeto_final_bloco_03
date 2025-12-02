@@ -15,9 +15,9 @@ function CardCategoria({ categoria }: CardCategoriaProps) {
 
     return (
 
-        <div className='flex flex-col rounded-2xl overflow-hidden justify-between my-4 '>
+        <div className=' pt-10 flex flex-col rounded-2xl overflow-hidden justify-between my-2 '>
 
-            <header className=' px-6 py-2 bg-teal-500 text font-semibold text-2xl'>
+            <header className='px-6 py-2 bg-teal-500 text font-semibold text-2xl'>
 
                 Categoria
 
