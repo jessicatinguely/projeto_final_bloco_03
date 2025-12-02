@@ -46,9 +46,15 @@ function Navbar({ menuState, onMenuToggle, onMenuClose }: Readonly<NavbarProps>)
 
                     {/* Menu de navegação */}
                     <div className='items-center hidden gap-4 py-4 md:flex'>
-                        <button type="button" className="hover:underline">Produtos</button>
-                        <button type="button" className='hover:underline'>Categorias</button>
-                        <button type="button" className='hover:underline'>Cadastrar Categoria</button>
+                    <Link to='' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                            Produtos
+                        </Link>
+                        <Link to='/categorias' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                            Categorias
+                        </Link>
+                        <Link to='/categorias/cadastrar' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                            Cadastrar Categoria
+                        </Link>
                         <UserIcon size={32} weight='bold' />
                         <ShoppingCartIcon size={32} weight='bold' />
                     </div>
@@ -93,13 +99,21 @@ function Navbar({ menuState, onMenuToggle, onMenuClose }: Readonly<NavbarProps>)
                         </div>
 
                         {/* Itens de navegação mobile: Home é rota; os demais continuam sem rota */}
-                        <Link to="/" onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300 text-left w-full">
+                        <Link to='/home' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
                             Home
                         </Link>
-                        <button onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300 text-left w-full">Produtos</button>
-                        <button onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300 text-left w-full">Cadastrar Produto</button>
-                        <button onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300 text-left w-full">Categorias</button>
-                        <button onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300 text-left w-full">Cadastrar Categoria</button>
+                        <Link to='' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                            Produtos
+                        </Link>
+                        <Link to='' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                            Cadastrar Produto
+                        </Link>
+                        <Link to='/categorias' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                            Categorias
+                        </Link>
+                        <Link to='/categorias/cadastrar' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                            Cadastrar Categoria
+                        </Link>
 
                         {/* Ícones de usuário e carrinho no menu mobile */}
                         <div className='flex gap-4 mt-4'>
