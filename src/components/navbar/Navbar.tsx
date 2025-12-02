@@ -46,7 +46,7 @@ function Navbar({ menuState, onMenuToggle, onMenuClose }: Readonly<NavbarProps>)
 
                     {/* Menu de navegação */}
                     <div className='items-center hidden gap-4 py-4 md:flex'>
-                    <Link to='' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                    <Link to='/produtos' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
                             Produtos
                         </Link>
                         <Link to='/categorias' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
@@ -102,10 +102,10 @@ function Navbar({ menuState, onMenuToggle, onMenuClose }: Readonly<NavbarProps>)
                         <Link to='/home' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
                             Home
                         </Link>
-                        <Link to='' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                        <Link to='/produtos' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
                             Produtos
                         </Link>
-                        <Link to='' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
+                        <Link to='/cadproduto' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">
                             Cadastrar Produto
                         </Link>
                         <Link to='/categorias' onClick={handleMenuClose} className="py-2 text-white hover:text-gray-300">

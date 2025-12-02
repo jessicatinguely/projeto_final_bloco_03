@@ -1,3 +1,5 @@
+import ModalProduto from "../../components/produtos/modalprodutos/ModalProduto"
+
 function Home() {
 	return (
 		<div className="flex justify-center items-center w-full min-h-[calc(100vh-9rem)] md:h-[calc(100vh-9rem)]">
@@ -11,8 +13,8 @@ function Home() {
 					</p>
 
 					<div className="flex justify-around gap-4">
-						<div className="px-4 py-2 text-emerald-400 border-2 border-emerald-400 border-solid rounded">
-							Novo Produto
+					<div className="hidden md:flex justify-around gap-4">
+							<ModalProduto />
 						</div>
 					</div>
 				</div>
